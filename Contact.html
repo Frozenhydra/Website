@@ -25,10 +25,6 @@
         </div>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Suchen</button>
-    </form>
   </div>
 </nav>
   <head>
@@ -39,11 +35,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="Stylesheet.css?#">
+    <link rel="stylesheet" href="Contact.css?#">
 
   </head>
 
@@ -52,36 +49,57 @@
       <form>
        <div class="form-row">
          <div class="col">
-         <input type="text" class="form-control" placeholder="First name">
+         <input type="text" class="form-control" placeholder="First name" id="Fname">
         </div>
          <div class="col">
-         <input type="text" class="form-control" placeholder="Last name">
+         <input type="text" class="form-control" placeholder="Last name" id="Lname">
         </div>
         </div>
         <div class="form-row">
          <div class="col">
-         <input type="email" class="form-control" placeholder="Email address">
+         <input type="email" class="form-control" placeholder="Email address" id="Email">
         </div>
          <div class="col">
-         <input type="phonenumber" class="form-control" placeholder="Phone number">
+         <input type="phonenumber" class="form-control" placeholder="Phone number" id="Phone">
         </div>
         </div>
 
         <div class="form-group">
          <label for="exampleFormControlTextarea1">Your message</label>
-         <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Type here..."></textarea>
+         <textarea class="form-control" id="Message" rows="5" placeholder="Type here..."></textarea>
         </div>
 
       
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <title>Alert</title>
+          
+          
+          <div id="Alertoverlay"></div>
+          <div id="Alertbox">
+          <div id="box">
+          <i class="fas fa-check-circle fa-5x"></i>
+          <h3>Check to make sure this is your information:</h3>
+          <p id="FnameConfirmation"></p>
+          <p id="LnameConfirmation"></p>
+          <p id="EmailConfirmation"></p>
+          <p id="PhoneConfirmation"></p>
+          <p id="MessageConfirmation"></p>
+          <div id="closeModal"></div>
+          </div>
+          </div>
+           <button onclick="Alert.render('T')" class="btn btn-primary">Submit</button>
+          
+       
         </div>
       </form>
       
-    <!-- Bootstrap JS -->
+    <!-- Strap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
+    <script src="Buttonscript.js"></script>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  
+
+
   <a class="navbar-brand" href="#">Contact</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
